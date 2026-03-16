@@ -21,7 +21,7 @@ def register(group):
 def counts(config, prefix, over):
     """Show member counts per PLG."""
     conn = config.get_db()
-    where = f"WHERE plg LIKE '{prefix.upper()}%'" if prefix != "all" else ""
+    where = f"WHERE m.plg LIKE '{prefix.upper()}%'" if prefix != "all" else ""
     rows = conn.execute(f"""
         SELECT m.plg, COUNT(*) as cnt, s.space_id, s.slug
         FROM members m LEFT JOIN spaces s ON m.plg = s.plg

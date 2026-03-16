@@ -45,5 +45,4 @@ target-version = "py39"
 line-length = 120
 
 [tool.pytest.ini_options]
-asyncio_mode = "auto"
 testpaths = ["tests"]
