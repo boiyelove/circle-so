@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "circle-so"
+name = "circle-so-cli"
 version = "0.1.0"
 description = "CLI toolkit for managing Circle.so communities at scale"
 readme = "README.md"
