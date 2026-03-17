@@ -4,18 +4,23 @@ build-backend = "hatchling.build"
 
 [project]
 name = "circle-so-cli"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI toolkit for managing Circle.so communities at scale"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
 authors = [{ name = "Damilola Afolabi" }]
-keywords = ["circle", "circle.so", "community", "cli", "management"]
+keywords = ["circle", "circle.so", "community", "cli", "management", "circle-api", "circle-admin", "community-management", "member-management", "circle-so", "bulk-operations"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: System :: Systems Administration",
+    "Environment :: Console",
     "Typing :: Typed",
 ]
 dependencies = [
@@ -36,6 +41,9 @@ circle-so = "circle_so.cli:main"
 [project.urls]
 Homepage = "https://github.com/boiyelove/circle-so"
 Repository = "https://github.com/boiyelove/circle-so"
+Issues = "https://github.com/boiyelove/circle-so/issues"
+Changelog = "https://github.com/boiyelove/circle-so/blob/main/docs/ROADMAP.md"
+"SDK" = "https://pypi.org/project/circle-so-python-sdk/"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/circle_so"]
