@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "circle-so-cli"
-version = "0.1.1"
+version = "0.2.0"
 description = "CLI toolkit for managing Circle.so communities at scale"
 readme = "README.md"
 license = "MIT"
