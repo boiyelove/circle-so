@@ -50,6 +50,29 @@ CIRCLE_SO_DB=./circle-so.db
 CIRCLE_SO_DATA_DIR=~/Documents/Andela-K8s
 ```
 
+### Token Types
+
+Different commands require different tokens:
+
+| Commands | Token needed | Source |
+|----------|-------------|--------|
+| `spaces`, `members`, `moderators`, `report` | Admin API token | Circle Admin > Settings > API |
+| `chat` (list, read, send, unread) | Headless Auth token | Circle Admin > Developers > Headless Auth |
+
+The `chat` commands also require your Circle email via `--email` or `CIRCLE_USER_EMAIL`:
+
+```bash
+export CIRCLE_API_TOKEN="your_headless_token"
+export CIRCLE_USER_EMAIL="you@example.com"
+
+circle-so chat list
+circle-so chat unread
+circle-so chat read <uuid>
+circle-so chat send <uuid> "Your message"
+```
+
+The headless token generates a short-lived Bearer access token for your account, giving access to your DMs, notifications, and posts as yourself.
+
 ## License
 
 MIT
