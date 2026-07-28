@@ -89,9 +89,9 @@ def add(config, csv_path, space, dry_run):
         for u in users:
             click.echo(f"[DRY RUN] {u['name']} ({u['email']})")
         return
+    import os
     client = config.get_client()
     sg_id = int(os.environ.get("CIRCLE_SPACE_GROUP_ID", "0"))
-    import os
     success = failed = 0
     for u in users:
         try:

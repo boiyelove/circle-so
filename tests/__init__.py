@@ -1,10 +1,6 @@
 """Test fixtures."""
-import os
 import pytest
-import sqlite3
 from click.testing import CliRunner
-from circle_so.cli import main
-from circle_so.config import Config
 from circle_so.db.connection import get_connection
 
 

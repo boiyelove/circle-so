@@ -1,5 +1,4 @@
 """Tests for DB connection and migrations."""
-import sqlite3
 from circle_so.db.connection import get_connection, MIGRATIONS
 
 

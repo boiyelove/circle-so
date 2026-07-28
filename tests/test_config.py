@@ -1,5 +1,4 @@
 """Tests for config."""
-import os
 from circle_so.config import Config
 
 

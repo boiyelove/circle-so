@@ -1,5 +1,4 @@
 """Tests for CLI commands."""
-import os
 import csv
 from click.testing import CliRunner
 from circle_so.cli import main

@@ -52,6 +52,11 @@ packages = ["src/circle_so"]
 target-version = "py39"
 line-length = 120
 
+[tool.ruff.lint.per-file-ignores]
+# Deliberate: command groups are defined first, then registered by importing
+# each command module's register() after all @main.group() stubs exist.
+"src/circle_so/cli.py" = ["E402"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = [
