@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "circle-so-cli"
-version = "0.2.0"
+version = "0.3.0"
 description = "CLI toolkit for managing Circle.so communities at scale"
 readme = "README.md"
 license = "MIT"
@@ -24,7 +24,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "circle-so-python-sdk>=0.1.0",
+    "circle-so-python-sdk>=0.1.4",
     "click>=8.0",
     "python-dotenv>=1.0",
 ]
@@ -54,3 +54,6 @@ line-length = 120
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "integration: marks tests as integration (deselect with '-m not integration')",
+]

@@ -9,6 +9,7 @@
 - [ ] `members` commands: import, audit, add, fix-missing
 - [ ] `moderators` commands: verify, add
 - [ ] `report` commands: counts, inactive, missing, export
+- [x] `posts` commands: create, update, comment, comments, delete-comment
 
 ## Phase 2: Caching Layer
 - [ ] `--cache` flag on read commands
@@ -55,4 +56,4 @@
 ## Non-Goals
 - Replacing the Circle.so web UI for day-to-day operations
 - Real-time chat or notification management
-- Content creation or moderation workflows
+- Full content-authoring workflows (markdown pipelines, scheduling, image handling) -- `posts` covers plain-text create/update/comment for scripted/bulk use, not a CMS

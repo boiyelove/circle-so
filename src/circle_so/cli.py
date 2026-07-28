@@ -45,15 +45,23 @@ def chat(config):
     """Manage DMs and chat."""
 
 
+@main.group()
+@pass_config
+def posts(config):
+    """Manage posts and comments."""
+
+
 # Register subcommands
 from circle_so.commands.spaces import register as register_spaces
 from circle_so.commands.members import register as register_members
 from circle_so.commands.moderators import register as register_moderators
 from circle_so.commands.report import register as register_report
 from circle_so.commands.chat import register as register_chat
+from circle_so.commands.posts import register as register_posts
 
 register_spaces(spaces)
 register_members(members)
 register_moderators(moderators)
 register_report(report)
 register_chat(chat)
+register_posts(posts)

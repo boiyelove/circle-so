@@ -37,7 +37,17 @@ circle-so report counts --prefix kcna
 circle-so report inactive
 circle-so report missing
 circle-so report export moves
+
+# Posts and comments
+circle-so posts create --space 1761803 --title "Hello" --body "World"
+circle-so posts create --space 1761803 --title "Hello" --body-file post.txt
+circle-so posts update 34771554 --title "New Title"
+circle-so posts comment 34771554 "Nice post!"
+circle-so posts comments 34771554
+circle-so posts delete-comment 110399141
 ```
+
+> **Note:** Circle's comment API is plain-text only and strips all newlines with no replacement -- the SDK auto-flattens multi-line/markdown comment bodies into a single line so nothing gets jammed together. See [circle-so-python-sdk's limitations doc](https://github.com/boiyelove/circle-so-python-sdk/blob/main/docs/limitations.md#comments) for detail. There's also no comment-edit endpoint; use `delete-comment` + `comment` to "edit."
 
 ## Configuration
 
@@ -56,7 +66,7 @@ Different commands require different tokens:
 
 | Commands | Token needed | Source |
 |----------|-------------|--------|
-| `spaces`, `members`, `moderators`, `report` | Admin API token | Circle Admin > Settings > API |
+| `spaces`, `members`, `moderators`, `report`, `posts` | Admin API token | Circle Admin > Settings > API |
 | `chat` (list, read, send, unread) | Headless Auth token | Circle Admin > Developers > Headless Auth |
 
 The `chat` commands also require your Circle email via `--email` or `CIRCLE_USER_EMAIL`:
