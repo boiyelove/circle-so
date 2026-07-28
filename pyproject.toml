@@ -52,6 +52,13 @@ packages = ["src/circle_so"]
 target-version = "py39"
 line-length = 120
 
+[tool.ruff.lint]
+# Explicit select, not ruff's shifting default -- pins CI behavior so a
+# `pip install -U ruff` can't silently turn CI red with unrelated findings
+# (mirrors circle-so-python-sdk's pyproject.toml; see that repo's comment
+# for the concrete incident this guards against).
+select = ["E4", "E7", "E9", "F"]
+
 [tool.ruff.lint.per-file-ignores]
 # Deliberate: command groups are defined first, then registered by importing
 # each command module's register() after all @main.group() stubs exist.
